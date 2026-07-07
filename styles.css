@@ -62,7 +62,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 3rem;
+    padding: 5rem;
 }
 
 main {
@@ -70,13 +70,19 @@ main {
     max-width: 60rem;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: stretch;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: sticky;
+    top: 40%;
 }
 
 nav {
     width: 30%;
-    position: sticky;
-    top: 10vh;
 }
 
 ul {
