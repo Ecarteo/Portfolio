@@ -8,6 +8,10 @@ html, body {
     margin: 0;
 }
 
+h1, h2, h3, h4, p {
+    margin: 0;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -40,6 +44,12 @@ h4 {
 h3, h4 {
     font-family: "SN Pro", sans-serif;
     margin: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 main {
@@ -79,6 +89,12 @@ footer {
     gap: 8vh;
 }
 
+#about {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
 #skills {
     display: flex;
     flex-direction: column;
@@ -86,36 +102,37 @@ footer {
 }
 
 #skills img {
-    width: 5rem;
-}
-
-.skills-category {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
-}
-
-.skills-category ul li {
-    font-family: "Bricolage Grotesque", sans-serif;
-    font-weight: bold;
-    width: 6.5rem;
+    width: 4rem;
+    height: 4rem;
+    object-fit: contain;
 }
 
 #skills ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
-    margin-bottom: 2rem;
+    gap: 1.2rem;
+    padding: 0;
 }
 
 #skills ul li {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
+    gap: 1rem;
     text-align: center;
+    width: max-content;
+
+    /* card appereance */
+    padding: 0.8rem 1rem;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    background-color: #e7e7e7;
+}
+
+#skills ul li span {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: bold;
+    white-space: nowrap;
 }
 
 @media (max-width: 768px) {
