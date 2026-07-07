@@ -87,8 +87,12 @@ ul {
 
 a {
     text-decoration: none;
-    color: purple;
     cursor: pointer;
+    color: inherit;
+}
+
+nav a {
+    color: purple;
 }
 
 footer {
@@ -96,6 +100,8 @@ footer {
     flex-direction: column;
     gap: 10rem;
     padding: 8rem 0rem 2rem;
+    width: 80%;
+    max-width: 60rem;
 }
 
 .main-content {
@@ -126,6 +132,7 @@ footer {
 #skills ul {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
     gap: 1.2rem;
     padding: 0;
 }
@@ -171,7 +178,7 @@ footer {
     flex-direction: column;
     width: calc(50% - 1rem); /* calculate size according to the gap between elements */
     height: 24rem;
-    border-radius: 20px;
+    border-radius: 12px;
     overflow: hidden;
     background-color: #e7e7e7;
 }
@@ -182,8 +189,6 @@ footer {
     flex-direction: column;
     width: 100%;
     height: 100%;
-    text-decoration: none;
-    color: inherit;
 }
 
 /* project thumbnail */
@@ -206,14 +211,64 @@ footer {
 #contact {
     display: flex;
     flex-direction: row;
-}
-
-.footer-text {
-    width: 50%;
+    gap: 2rem;
+    width: 100%;
 }
 
 .footer-links {
-    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: calc(60% - 0.8rem); /* 60% of the container's size */
+}
+
+.footer-links li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-links a {
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+    align-items: center;
+    padding: 1rem;
+    background-color: #e7e7e7;
+    border-radius: 30px;
+}
+
+.footer-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: calc(40% - 1.2rem); /* 40% of the container's size */
+}
+
+.social-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0; /* evita que el ícono se achique dentro del flex */
+    background-color: currentColor;
+    mask: var(--icon) no-repeat center / contain;
+    -webkit-mask: var(--icon) no-repeat center / contain;
+    color: #555;
+    transition: color 0.2s ease;
+}
+
+a:hover .social-icon {
+    color: #e51212;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-bottom a {
+    color: purple;
 }
 
 /* landscape mode */
@@ -228,5 +283,20 @@ footer {
 
     #projects ul li {
         width: 100%;
+    }
+
+    #contact {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .footer-text,
+    .footer-links {
+        width: 100%;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 2rem;
     }
 }
