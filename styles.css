@@ -176,7 +176,8 @@ main {
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    max-width: 60rem;
+    max-width: 64rem;
+    padding: 2rem;
     gap: 2rem;
 }
 
@@ -228,7 +229,7 @@ main {
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: 80vh; /* seize the 80% of the screen height */
+    min-height: 90vh; /* seize the 80% of the screen height */
     /* TEMPORAL FOR GUIDANCE */
     background-color: #d5ff8035;
 }
@@ -238,7 +239,8 @@ main {
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    max-width: 60rem;
+    max-width: 69rem;
+    padding: 2rem;
     gap: 2rem;
 }
 
@@ -295,7 +297,7 @@ footer {
     /* justify-content: center; */
     padding: 0rem 0rem 1rem;
     width: 100%;
-    min-height: 60vh;
+    min-height: 65vh;
 }
 
 .footer-container {
@@ -384,7 +386,7 @@ a:hover .social-icon {
 }
 
 /* portrait mode */
-@media (max-width: 768px) {
+@media (max-width: 840px) {
     /* title sizes */
     h1 {font-size: 4.5rem;}
     h2 {font-size: 3rem;}
@@ -405,6 +407,18 @@ a:hover .social-icon {
         width: 100%;
     }
 
+    footer {
+        min-height: 100vh;
+    }
+    .footer-container {
+        padding: 0rem 2rem 0rem;
+    }
+
+    #contact {
+        justify-content: center;
+        gap: 2rem;
+    }
+    
     .footer-text,
     .footer-links {
         width: 100%;
