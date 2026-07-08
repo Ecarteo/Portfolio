@@ -27,8 +27,7 @@ h1, h2, h3, h4, p {
 body {
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    gap: 10rem;
+    align-items: center;
     font-family: "Noto Sans Display", sans-serif;
     font-size: 1.2rem;
 }
@@ -56,7 +55,7 @@ h2 {
 }
 
 h3 {
-    font-size: 2.2rem;
+    font-size: 2.8rem;
 }
 
 h4 {
@@ -104,10 +103,11 @@ header {
 
 /* main section settings */
 main {
-    width: 100%;
-    max-width: 60rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10rem 5rem;
     gap: 10rem;
 }
 
@@ -138,13 +138,34 @@ footer {
 
 #about {
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    max-width: 70rem;
+    gap: 1rem;
+}
+
+.about-text {
+    display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 2rem;
+    width: 50%;
+    padding: 3rem;
+}
+
+#about img {
+    width: 50%;
+    height: auto;
+    object-fit: contain;
+
 }
 
 #skills {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 60rem;
     gap: 2rem;
 }
 
@@ -186,6 +207,8 @@ footer {
 #projects {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 60rem;
     gap: 2rem;
 }
 
@@ -306,6 +329,16 @@ a:hover .social-icon {
 
 /* landscape mode */
 @media (max-width: 768px) {
+    #about {
+        flex-direction: column;
+        /* width: 100%; */
+    }
+
+    .about-text, #about img {
+        width: 100%;
+        padding: 3rem;
+    }
+
     #projects ul li {
         width: 100%;
     }
