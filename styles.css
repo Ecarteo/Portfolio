@@ -416,6 +416,16 @@ footer {
     .about-text, #about img {
         width: 100%;
         padding: 2rem;
+        max-height: 35rem;
+    }
+
+    #skills {
+        min-height: 75vh;
+    }
+
+    #skills span {
+        visibility: none;
+        display: none;
     }
 
     #projects ul li {
