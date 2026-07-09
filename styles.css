@@ -232,7 +232,7 @@ main {
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: 90vh; /* seize the 80% of the screen height */
+    min-height: 90vh; /* seize the 90% of the screen height */
     /* TEMPORAL FOR GUIDANCE */
     background-color: #d5ff8035;
 }
@@ -244,12 +244,12 @@ main {
     width: 100%;
     max-width: 69rem;
     padding: 2rem;
-    gap: 2rem;
+    gap: 2rem
 }
 
 #projects ul {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
     width: 100%;
     padding: 0;
@@ -259,8 +259,8 @@ main {
 #projects ul li {
     display: flex;
     flex-direction: column;
-    width: calc((100% - 4rem) / 3); 
-    height: 30rem;
+    height: 28rem;
+    aspect-ratio: 3/4;
     border-radius: 12px;
     overflow: hidden;
     background-color: #e7e7e7;
@@ -278,8 +278,7 @@ main {
 #projects ul li img {
     width: 100%;
     height: 50%; /* half of the container's size */
-    object-fit: contain;
-    background-color: rgb(215, 215, 215);
+    object-fit: cover;
 }
 
 /* project details */
@@ -428,8 +427,8 @@ footer {
         display: none;
     }
 
-    #projects ul li {
-        width: 100%;
+    #projects ul {
+        flex-wrap: wrap;
     }
 
     footer {
