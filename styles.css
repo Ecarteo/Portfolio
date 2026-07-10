@@ -68,7 +68,7 @@ h2 {
     color: rgb(255, 181, 53);
         text-shadow:
         0 0 10px rgba(255, 181, 53, 0.6),
-        0 0 20px rgba(255, 181, 535, 0.4)
+        0 0 20px rgba(255, 181, 53, 0.4)
     ;
 }
 
@@ -100,19 +100,6 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
-
-/* arrow animation */
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-10px);
-    }
-    60% {
-        transform: translateY(-5px);
-    }
 }
 
 /* MAIN */
@@ -284,13 +271,17 @@ main {
 }
 
 /* project details */
-.project-details,
-#projects ul li > div {
+.project-details {
     height: 50%; /* half of the container's size */
     padding: 1rem 1.2rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+}
+
+/* coming soon */
+.coming-soon-project {
+    cursor: default;
 }
 
 /* FOOTER */
@@ -425,7 +416,6 @@ footer {
     }
 
     #skills span {
-        visibility: none;
         display: none;
     }
 
