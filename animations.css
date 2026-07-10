@@ -41,20 +41,6 @@ header::after {
 }
 
 /* arrow animation */
-.scroll-indicator {
-    position: absolute;
-    bottom: 4rem;
-    opacity: 0.5;
-}
-
-.arrow {
-    width: 50px;
-    height: auto;
-    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.6)) invert(1); 
-    animation: bounce 2s infinite;
-}
-
-/* arrow animation */
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
