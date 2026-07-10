@@ -242,14 +242,15 @@ main {
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    max-width: 69rem;
-    padding: 2rem;
-    gap: 2rem
+    max-width: 71rem;
+    padding: 5rem 2rem;
+    gap: 2rem;
 }
 
 #projects ul {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 2rem;
     width: 100%;
     padding: 0;
@@ -259,11 +260,12 @@ main {
 #projects ul li {
     display: flex;
     flex-direction: column;
+    flex-shrink: 0;
     height: 28rem;
     aspect-ratio: 3/4;
     border-radius: 12px;
     overflow: hidden;
-    background-color: #e7e7e7;
+    background-color: #ffffff;
 }
 
 /* clickable element */
@@ -429,6 +431,10 @@ footer {
 
     #projects ul {
         flex-wrap: wrap;
+    }
+
+    .projects-container {
+        padding: 5rem 2rem;
     }
 
     footer {
