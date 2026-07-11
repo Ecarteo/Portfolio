@@ -52,3 +52,22 @@ header::after {
         transform: translateY(-5px);
     }
 }
+
+/* #about section background animation */
+@keyframes slideBackground {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(100vw / sin(105deg)));
+    }
+}
+
+@keyframes slideBackgroundMobile {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(200vw / sin(105deg)));
+    }
+}

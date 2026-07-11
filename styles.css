@@ -112,7 +112,8 @@ header {
 .arrow {
     width: 50px;
     height: auto;
-    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.6)) invert(1); 
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.6)) invert(1);
+    /* link animation */
     animation: bounce 2s infinite;
 }
 
@@ -131,25 +132,50 @@ main {
     align-items: center;
     width: 100%;
     min-height: 105vh; /* seize the 105% of the screen height */
+    position: relative;
+    overflow: hidden;
+}
 
-    /* TEMPORAL FOR GUIDANCE */
-    background-color: antiquewhite;
+.about-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250%; /* twice as wide */
+    height: 100%;
+    z-index: 0;  /* bg index */
+    pointer-events: none;
+
+    /* 5 colour gradiend repeated twice */
+    background-image: repeating-linear-gradient(
+        105deg,
+        #FFBE0B 0vw 20vw,
+        #FB5607 20vw 40vw,
+        #FF006E 40vw 60vw,
+        #8338EC 60vw 80vw,
+        #3A86FF 80vw 100vw
+    );
+
+    /* link animation */
+    animation: slideBackground 45s linear infinite;
 }
 
 .about-container {
+    /* flexbox */
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    
+    position: relative;
+    z-index: 1;
     width: 100%;
     max-width: 70rem;
     gap: 1rem;
+    margin: 1rem;
 
     background-color: #ffffff;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
     border-radius: 35px;
-    margin: 1rem;
-    z-index: 1;
 }
 
 /* text and image */
@@ -423,16 +449,32 @@ footer {
     h3 {font-size: 2.8rem;}
     h4 {font-size: 1.3rem;}
 
+    /* about section */
     /* containers display direction */
     .about-container, #contact {
         flex-direction: column;
     }
 
+    @media (max-width: 840px) {
+    .about-bg {
+        width: 500%;
+        background-image: repeating-linear-gradient(
+            105deg,
+            #FFBE0B 0vw 40vw,
+            #FB5607 40vw 80vw,
+            #FF006E 80vw 120vw,
+            #8338EC 120vw 160vw,
+            #3A86FF 160vw 200vw
+        );
+        animation: slideBackgroundMobile 25s linear infinite;
+    }}
+    
     .about-text, #about img {
         width: 100%;
         max-height: 35rem;
     }
 
+    /* skills */
     #skills {
         min-height: 75vh;
     }
@@ -441,6 +483,7 @@ footer {
         display: none;
     }
 
+    /* projects */
     #projects ul {
         flex-wrap: wrap;
     }
@@ -449,6 +492,7 @@ footer {
         padding: 5rem 2rem;
     }
 
+    /* footer */
     footer {
         min-height: 100vh;
     }
