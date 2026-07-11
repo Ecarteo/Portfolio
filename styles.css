@@ -174,7 +174,7 @@ main {
     margin: 1rem;
 
     background-color: #ffffff;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     border-radius: 35px;
 }
 
@@ -195,16 +195,14 @@ main {
     padding: 1rem;
 }
 
-/* skills section */
+/* SKILLS section */
 #skills {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     min-height: 65vh; /* seize the 65% of the screen height */
-
-    /* TEMPORAL FOR GUIDANCE */
-    background-color: #ff80d935;
+    background: linear-gradient(to bottom, #f1f2eb, #d8dad3);
 }
 
 .skills-container {
@@ -217,18 +215,14 @@ main {
     gap: 2rem;
 }
 
+/* skills section text */
 .skills-text {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-#skills img {
-    width: 4rem;
-    height: 4rem;
-    object-fit: contain;
-}
-
+/* technologies flexbox */
 #skills ul {
     display: flex;
     flex-wrap: wrap;
@@ -237,6 +231,7 @@ main {
     padding: 0;
 }
 
+/* cards */
 #skills ul li {
     display: flex;
     flex-direction: row;
@@ -247,22 +242,32 @@ main {
 
     /* card appereance */
     padding: 0.8rem 1rem;
-    border: 2px solid transparent;
-    border-radius: 12px;
-    background-color: #ffffff;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+
+    box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.08), /* shadow */
+    0 0 20px rgba(255, 255, 255, 0.1); /* glow */
+
+    transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
 }
 
+/* cards text */
 #skills ul li span {
     font-family: "Bricolage Grotesque", sans-serif;
     font-weight: bold;
     white-space: nowrap;
 }
 
-#skills ul li:hover {
-    cursor: default;
+/* logo */
+#skills img {
+    width: 4rem;
+    height: 4rem;
+    object-fit: contain;
 }
 
-/* projects section */
+/* PROJECTS section */
 #projects {
     display: flex;
     justify-content: center;
@@ -270,7 +275,7 @@ main {
     width: 100%;
     min-height: 90vh; /* seize the 90% of the screen height */
     /* TEMPORAL FOR GUIDANCE */
-    background-color: #d5ff8035;
+    background-color: #ffdf8035;
 }
 
 .projects-container {
@@ -477,6 +482,11 @@ footer {
     /* skills */
     #skills {
         min-height: 75vh;
+    }
+
+    #skills img {
+        width: 3rem;
+        height: 3rem;
     }
 
     #skills span {
