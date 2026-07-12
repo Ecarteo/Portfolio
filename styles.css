@@ -95,6 +95,8 @@ header {
     gap: 2rem;
     text-align: center;
     font-family: "Google Sans", sans-serif;
+    position: relative;
+    overflow: hidden;
     /* background */
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(img/header/background.jpg);
     background-size: cover;
@@ -202,7 +204,23 @@ main {
     align-items: center;
     width: 100%;
     min-height: 65vh; /* seize the 65% of the screen height */
-    background: linear-gradient(to bottom, #f1f2eb, #d8dad3);
+    /* background: linear-gradient(to bottom, #f1f2eb, #d8dad3); */
+    position: relative;
+    overflow: hidden;
+}
+
+/* animated background */
+#skills::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(to bottom, #F8F9FA, #DEE2E6, #9aa2a8);
+    animation: skillsGradientMove 5s ease infinite;
+    will-change: transform;
+    z-index: 0;
 }
 
 .skills-container {
@@ -213,6 +231,8 @@ main {
     max-width: 64rem;
     padding: 3rem 2rem;
     gap: 2rem;
+    position: relative;
+    z-index: 1;
 }
 
 /* skills section text */
@@ -308,7 +328,7 @@ main {
     overflow: hidden;
     position: relative;
     /* cards appereance */
-    background-color: #9f9f9f;
+    background-color: #f7f7f7;
     aspect-ratio: 3/4;
     border-radius: 12px;
     box-shadow: 

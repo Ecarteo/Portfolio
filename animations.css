@@ -1,10 +1,5 @@
 /* HEADER */
 /* glowing animation */
-header {
-    position: relative;
-    overflow: hidden;
-}
-
 header h1, 
 header h2, 
 .scroll-indicator {
@@ -64,7 +59,6 @@ header::after {
         transform: translateX(calc(100vw / sin(105deg)));
     }
 }
-
 @keyframes slideBackgroundMobile {
     0% {
         transform: translateX(0);
@@ -75,6 +69,20 @@ header::after {
 }
 
 /* SKILLS SECTION */
+/* background animation */
+@keyframes skillsGradientMove {
+    0% {
+        transform: translate(0%, 0%);
+    }
+    50% {
+        transform: translate(-25%, -15%);
+    }
+    100% {
+        transform: translate(0%, 0%);
+    }
+}
+
+/* elements animation */
 #skills ul li:hover {
     transform: scale(1.05);
     box-shadow:
