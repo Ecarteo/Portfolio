@@ -85,3 +85,25 @@ header::after {
     /* disable mouse */
     cursor: default;
 }
+
+/* PROJECTS SECTION */
+.project-overlay a:hover {
+    background-color: #ffffff61;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+/* hover effects */
+/* blur project details */
+#projects ul li:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+#projects ul li:hover .project-content:not(.coming-soon-project) {
+    filter: blur(4px);
+}
+
+#projects ul li:hover .project-overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
