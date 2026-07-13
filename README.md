@@ -1,4 +1,4 @@
-# Personal Portfolio Website
+# 🔴 Personal Portfolio Website
 
 ![Project Preview Thumbnail](.github/preview.jpg)
 
@@ -10,7 +10,7 @@ The site is built as a responsive, clean, and modern single-page application des
 
 ---
 
-## 🔴 Tech Stack & Infrastructure
+## 🟠 Tech Stack & Infrastructure
 
 *   **Frontend:** HTML5, CSS3, JavaScript.
 *   **Hosting:** GitHub Pages.
@@ -18,7 +18,7 @@ The site is built as a responsive, clean, and modern single-page application des
 
 ---
 
-## 🟠 Key Features
+## 🟡 Key Features
 
 *   **Responsive Layout:** Fully optimized for desktop and mobile devices.
 *   **Project Gallery:** An interactive showcase linking directly to live deployment and source code.
