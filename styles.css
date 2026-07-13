@@ -294,7 +294,24 @@ main {
     align-items: center;
     width: 100%;
     min-height: 90vh; /* seize the 90% of the screen height */
-    background-color:#ffec83;
+
+    /* BACKGROUND */
+    --s: 70px; /* control the size*/
+    --c1: #3A3335;
+    --c2: #D81E5B;
+    --c3: #F0544F;
+  
+    --_g: conic-gradient(at 50% 25%,#0000 75%,var(--c1) 0);
+    background:
+    var(--_g),var(--_g) var(--s) var(--s),
+    var(--_g) calc(2*var(--s)) calc(2*var(--s)),
+    var(--_g) calc(3*var(--s)) calc(3*var(--s)),
+    repeating-linear-gradient(135deg,var(--c2) 0 12.5%,var(--c3) 0 25%);
+    background-size: calc(4*var(--s)) calc(4*var(--s))
+}
+
+#projects h3 {
+    color: #ffffff;
 }
 
 /* container */
@@ -335,7 +352,7 @@ main {
     0 8px 20px rgba(0, 0, 0, 0.08), /* shadow */
     0 0 20px rgba(255, 255, 255, 0.1); /* glow */
     /* link animation */
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease, transform 0.5s ease;
 }
 
 /* project content & details */
@@ -395,13 +412,14 @@ main {
     gap: 0.5rem;
 
     padding: 0.7rem;
-    background-color: #ffffff2b;
-    color: #fff;
+    background-color: #3a3335ae;
+    color: #F0544F;
     text-decoration: none;
     border-radius: 12px;
     font-weight: bold;
     /* link animation */
     transition: background-color 0.3s ease, color 0.3s ease;
+    border: 1px solid #F0544F;
 }
 
 /* icons inside the buttons */
@@ -409,7 +427,7 @@ main {
     display: inline-block;
     width: 25px;
     height: 25px;
-    background-color: #fff; /* Color del ícono por defecto */
+    background-color: #F0544F; /* Color del ícono por defecto */
     
     -webkit-mask-image: var(--icon);
     mask-image: var(--icon);

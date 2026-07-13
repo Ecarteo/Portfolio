@@ -96,7 +96,7 @@ header::after {
 
 /* PROJECTS SECTION */
 .project-overlay a:hover {
-    background-color: #ffffff61;
+    background-color: #3a3335df;
     box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
     transform: scale(1.05);
 }
@@ -104,7 +104,8 @@ header::after {
 /* hover effects */
 /* blur project details */
 #projects ul li:hover {
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+    transform: scale(1.03);
 }
 
 #projects ul li:hover .project-content:not(.coming-soon-project) {
