@@ -104,7 +104,7 @@ header::after {
 /* hover effects */
 /* blur project details */
 #projects ul li:hover {
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
     transform: scale(1.03);
 }
 
@@ -115,4 +115,31 @@ header::after {
 #projects ul li:hover .project-overlay {
     opacity: 1;
     pointer-events: auto;
+}
+
+/* FOOTER */
+/* animated background */
+@keyframes loop {
+    0%   { transform: translate(0%, 0%) rotate(0deg); }
+    25%  { transform: translate(40%, 20%) rotate(90deg); }
+    50%  { transform: translate(60%, -10%) rotate(180deg); }
+    75%  { transform: translate(20%, -30%) rotate(270deg); }
+    100% { transform: translate(0%, 0%) rotate(360deg); }
+}
+
+/* hover effects */
+.footer-links li:nth-child(1) a:hover {
+    background-color: #ffffff;
+    color: #ff0000;
+    cursor: text;
+}
+
+.footer-links li:nth-child(2) a:hover {
+    background-color: #ffffff;
+    color: #0a66c2;
+}
+
+.footer-links li:nth-child(3) a:hover {
+    background-color: #ffffff;
+    color: #000000;
 }
