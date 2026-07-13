@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="animations.css">
     <!-- script -->
     <script src="main.js" defer></script>
+    <!-- smooth scrolling (lenis): https://github.com/darkroomengineering/lenis/tree/main -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.25/dist/lenis.css">
 </head>
 <body>
     <header>
@@ -186,5 +188,7 @@
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/lenis@1.3.25/dist/lenis.min.js"></script>
+    <script>new Lenis({ autoRaf: true, duration: 1 });</script>
 </body>
 </html>
