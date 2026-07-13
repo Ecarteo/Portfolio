@@ -25,8 +25,7 @@
 
 /* LOADING SCREEN */
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+    100% { transform: rotate(360deg); }
 }
 
 /* HEADER */
@@ -47,7 +46,7 @@ header::after {
     filter: blur(195px);
     z-index: 1;
     animation: breathingEffect 2s infinite alternate ease-in-out;
-    will-change: transform, background-color;
+    will-change: transform, opacity;
 }
 
 header::before {
@@ -89,30 +88,15 @@ header::after {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(100vw / sin(105deg)));
-    }
-}
-@keyframes slideBackgroundMobile {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(calc(200vw / sin(105deg)));
+        transform: translateX(calc(var(--bg-width) / sin(105deg)));
     }
 }
 
 /* SKILLS SECTION */
 /* background animation */
 @keyframes skillsGradientMove {
-    0% {
-        transform: translate(0%, 0%);
-    }
-    50% {
-        transform: translate(-25%, -15%);
-    }
-    100% {
-        transform: translate(0%, 0%);
-    }
+    0%, 100% { transform: translate(0); }
+    50% { transform: translate(-25%, -15%); }
 }
 
 /* elements animation */
@@ -161,18 +145,10 @@ header::after {
 }
 
 /* hover effects */
-.footer-links li:nth-child(1) a:hover {
+.footer-links a:hover {
     background-color: #ffffff;
-    color: #ff0000;
-    cursor: text;
 }
 
-.footer-links li:nth-child(2) a:hover {
-    background-color: #ffffff;
-    color: #0a66c2;
-}
-
-.footer-links li:nth-child(3) a:hover {
-    background-color: #ffffff;
-    color: #000000;
-}
+.footer-links li:nth-child(1) a:hover { color: #ff0000; cursor: text; }
+.footer-links li:nth-child(2) a:hover { color: #0a66c2; }
+.footer-links li:nth-child(3) a:hover { color: #000000; }

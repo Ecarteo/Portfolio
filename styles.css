@@ -1,32 +1,24 @@
 /* global settings */
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 /* prevent text selection */
 img, header, .projects-container ul li, .footer-bottom p {
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none;    /* Firefox */
-  -ms-user-select: none;     /* IE 10+ and Edge */
-  user-select: none;         /* Standard syntax */
+    -webkit-user-select: none; /* Safari */
+    user-select: none;         /* Standard syntax */
 }
 
 /* prevent image dragging */
 img {
-  -webkit-user-drag: none;    /* Prevents dragging the image */
-  pointer-events: none;       /* Makes the image invisible to mouse clicks */
+    -webkit-user-drag: none;    /* Prevents dragging the image */
+    pointer-events: none;       /* Makes the image invisible to mouse clicks */
 }
 
 /* PAGE BEHAVIOUR */
 html, body {
-    /* min-height: 100vh; */
     width: 100%;
-    margin: 0;
 }
 
-h1, h2, h3, h4, p {
-    margin: 0;
-}
+html, body, h1, h2, h3, h4, p, ul { margin: 0;}
 
 body {
     display: flex;
@@ -36,25 +28,25 @@ body {
     font-size: 1.2rem;
 }
 
-p {
-    line-height: 1.5;
+/* MAIN */
+main {
+    width: 100%;
 }
+
+p { line-height: 1.5; }
 
 ul {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
 a {
     text-decoration: none;
-    cursor: pointer;
     color: inherit;
 }
 
 h1 {
     font-size: 5rem;
-    padding: 0rem 1.5rem;
     color: #ffffff;
     text-shadow:
         0 0 10px rgba(255, 255, 255, 0.6),
@@ -64,7 +56,6 @@ h1 {
 
 h2 {
     font-size: 3.5rem;
-    padding: 0rem 1.5rem;
     color: #FFB535;
         text-shadow:
         0 0 10px rgba(255, 181, 53, 0.6),
@@ -72,41 +63,45 @@ h2 {
     ;
 }
 
-h3 {font-size: 3.2rem;}
+h1, h2 { padding: 0 1.5rem; }
 
-h4 {font-size: 1.5rem;}
+h3 { font-size: 3.2rem; }
 
-h3, h4 {
-    font-family: "SN Pro", sans-serif;
+h4 { font-size: 1.5rem; }
+
+h3, h4 { font-family: "SN Pro", sans-serif; }
+
+#about, #skills, #projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 /* LOADING SCREEN */
 #loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: #071013;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 100;
-  transition: opacity 1s ease, visibility 1s ease;
+    position: fixed;
+    inset: 0;
+    background-color: #071013;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: opacity 1s ease, visibility 1s ease;
 }
 
 #loader.hidden {
-  opacity: 0;
-  visibility: hidden;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .spinner {
-  width: 100px;
-  height: 100px;
-  border: 10px solid #ffffff;
-  border-top: 10px solid #FFB535;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
+    width: 100px;
+    height: 100px;
+    border: 10px solid #ffffff;
+    border-top: 10px solid #FFB535;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
 }
 
 /* HEADER */
@@ -119,6 +114,7 @@ header {
     /* size */
     width: 100%;
     height: 100vh;
+    height: 100dvh; /* for portrait */
     padding-bottom: 6rem;
     /* settings */
     gap: 2rem;
@@ -127,10 +123,7 @@ header {
     position: relative;
     overflow: hidden;
     /* background */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(img/header/background.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(img/header/background.jpg) center / cover no-repeat;
 }
 
 /* arrow */
@@ -148,35 +141,23 @@ header {
     animation: bounce 2s infinite;
 }
 
-/* MAIN */
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
 
-/* about section */
+/* ABOUT section */
 #about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     min-height: 105vh; /* seize the 105% of the screen height */
     position: relative;
-    overflow: hidden;
 }
 
 .about-bg {
     position: absolute;
     top: 0;
     right: 0;
-    width: 250%; /* twice as wide */
+    width: 250%;
     height: 100%;
     z-index: 0;  /* bg index */
     pointer-events: none;
 
-    /* 5 colour gradiend repeated twice */
     background-image: repeating-linear-gradient(
         105deg,
         #FFBE0B 0vw 20vw,
@@ -187,13 +168,13 @@ main {
     );
 
     /* link animation */
+    --bg-width: 100vw;
     animation: slideBackground 45s linear infinite;
 }
 
 .about-container {
     /* flexbox */
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     
@@ -228,14 +209,9 @@ main {
 
 /* SKILLS section */
 #skills {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     min-height: 65vh; /* seize the 65% of the screen height */
-    /* background: linear-gradient(to bottom, #f1f2eb, #d8dad3); */
     position: relative;
-    overflow: hidden;
 }
 
 /* animated background */
@@ -277,13 +253,11 @@ main {
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 1.2rem;
-    padding: 0;
 }
 
 /* cards */
 #skills ul li {
     display: flex;
-    flex-direction: row;
     align-items: center;
     gap: 1rem;
     text-align: center;
@@ -318,10 +292,6 @@ main {
 
 /* PROJECTS section */
 #projects {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
     width: 100%;
     min-height: 90vh; /* seize the 90% of the screen height */
 
@@ -330,14 +300,13 @@ main {
     --c1: #3A3335;
     --c2: #D81E5B;
     --c3: #F0544F;
-  
     --_g: conic-gradient(at 50% 25%,#0000 75%,var(--c1) 0);
     background:
     var(--_g),var(--_g) var(--s) var(--s),
     var(--_g) calc(2*var(--s)) calc(2*var(--s)),
     var(--_g) calc(3*var(--s)) calc(3*var(--s)),
     repeating-linear-gradient(135deg,var(--c2) 0 12.5%,var(--c3) 0 25%);
-    background-size: calc(4*var(--s)) calc(4*var(--s))
+    background-size: calc(4*var(--s)) calc(4*var(--s));
 }
 
 #projects h3 {
@@ -363,7 +332,6 @@ main {
     flex-wrap: wrap;
     gap: 2rem;
     width: 100%;
-    padding: 0;
 }
 
 /* project elements */
@@ -443,7 +411,6 @@ main {
     padding: 0.7rem;
     background-color: #3a3335ae;
     color: #F0544F;
-    text-decoration: none;
     border-radius: 12px;
     font-weight: bold;
     /* link animation */
@@ -457,16 +424,9 @@ main {
     width: 25px;
     height: 25px;
     background-color: #F0544F; /* Color del ícono por defecto */
-    
-    -webkit-mask-image: var(--icon);
-    mask-image: var(--icon);
-    -webkit-mask-size: contain;
-    mask-size: contain;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-    mask-position: center;
-    
+    mask: var(--icon) no-repeat center / contain;
+    -webkit-mask: var(--icon) no-repeat center / contain;
+    /* link animation */
     transition: background-color 0.3s ease;
 }
 
@@ -500,7 +460,7 @@ footer::before {
     opacity: 0.6;
     z-index: -1;
     pointer-events: none;
-    animation: loop 25s infinite ease;
+    animation: loop 20s infinite ease;
 }
 
 .footer-container {
@@ -515,7 +475,6 @@ footer::before {
 #contact {
     display: flex;
     flex: 1;
-    flex-direction: row;
     align-items: center;
     justify-content: space-around;
     width: 100%;
@@ -543,7 +502,6 @@ footer::before {
 
 .footer-links a {
     display: flex;
-    flex-direction: row;
     gap: 0.8rem;
     align-items: center;
     padding: 1.4rem;
@@ -571,7 +529,6 @@ footer::before {
 /* copyright section */
 .footer-bottom {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     padding: 0rem 2rem;
     gap: 0.5rem;
@@ -591,12 +548,10 @@ footer::before {
     h4 {font-size: 1.3rem;}
 
     /* about section */
-    /* containers display direction */
     .about-container, #contact {
         flex-direction: column;
     }
 
-    @media (max-width: 840px) {
     .about-bg {
         width: 500%;
         background-image: repeating-linear-gradient(
@@ -607,8 +562,9 @@ footer::before {
             #8338EC 120vw 160vw,
             #3A86FF 160vw 200vw
         );
-        animation: slideBackgroundMobile 25s linear infinite;
-    }}
+        --bg-width: 200vw;
+        animation-duration: 25s;
+    }
     
     .about-text, #about img {
         width: 100%;
@@ -627,15 +583,6 @@ footer::before {
 
     #skills span {
         display: none;
-    }
-
-    /* projects */
-    #projects ul {
-        flex-wrap: wrap;
-    }
-
-    .projects-container {
-        padding: 5rem 2rem;
     }
 
     /* footer */
