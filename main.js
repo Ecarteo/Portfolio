@@ -1,3 +1,18 @@
+// loading screen
+const loader = document.getElementById('loader');
+let isLoaded = false;
+
+const removeLoader = () => {
+    if (isLoaded) return;
+    isLoaded = true;
+
+    loader.classList.add('hidden');
+    setTimeout(() => loader.remove(), 500);
+};
+
+window.addEventListener('load', removeLoader); // page ready
+setTimeout(removeLoader, 4000); // fail-safe
+
 // reveal elements
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {

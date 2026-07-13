@@ -55,7 +55,7 @@ a {
 h1 {
     font-size: 5rem;
     padding: 0rem 1.5rem;
-    color: rgb(255, 255, 255);
+    color: #ffffff;
     text-shadow:
         0 0 10px rgba(255, 255, 255, 0.6),
         0 0 20px rgba(255, 255, 255, 0.4)
@@ -65,7 +65,7 @@ h1 {
 h2 {
     font-size: 3.5rem;
     padding: 0rem 1.5rem;
-    color: rgb(255, 181, 53);
+    color: #FFB535;
         text-shadow:
         0 0 10px rgba(255, 181, 53, 0.6),
         0 0 20px rgba(255, 181, 53, 0.4)
@@ -78,6 +78,35 @@ h4 {font-size: 1.5rem;}
 
 h3, h4 {
     font-family: "SN Pro", sans-serif;
+}
+
+/* LOADING SCREEN */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #071013;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+#loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.spinner {
+  width: 100px;
+  height: 100px;
+  border: 10px solid #ffffff;
+  border-top: 10px solid #FFB535;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
 }
 
 /* HEADER */
